@@ -3,6 +3,7 @@
 #include <cmath>
 #include "scene.hpp"
 #include "defer.hpp"
+#include "pi.hpp"
 
 
 void FillOutDefaultValues(scene* s) {
@@ -157,7 +158,7 @@ void ParseSetting(char* Str, uint32_t* ParsePos, scene* Scene) {
     } else if (IsSetting("Seed")) {
         Scene->Seed = ParseInt(Str, ParsePos);
     } else if (IsSetting("CameraFOV")) {
-        Scene->CameraFOV = ParseFloat(Str, ParsePos) / 180 * M_PI;
+        Scene->CameraFOV = ParseFloat(Str, ParsePos) / 180 * pi;
     } else if (IsSetting("ResX")) {
         Scene->ResX = ParseInt(Str, ParsePos);
     } else if (IsSetting("ResY")) {

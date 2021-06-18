@@ -1,0 +1,14 @@
+GridFile = cloud-154.xyz
+Extinction = 10, 10, 10
+ScatteringAlbedo = 1, 1, 1
+G = 0.3, 0.3, 0.3
+
+CameraPos = -2, -2, -2
+CameraLookAt = 0, 0, 0
+CameraFOV = 10
+
+ResX = 10
+ResY = 10
+SamplesPerPixel = 1
+
+Seed = 123

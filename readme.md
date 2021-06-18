@@ -3,7 +3,11 @@
 ## How to use
 
  1. Compile the cpp files in the `src` folder to an executable (the CMake config
-    will work, but use whatever you want)
+    will work, but use whatever you want). If you don't want to use CMake just 
+    call
+    ```
+    clang++ -D_CRT_SECURE_NO_WARNINGS src/*.cpp -o dist/cloud_tracer.exe
+    ```
  2. Create an `output` folder inside of the `dist` folder (Sorry somehow I could
     not get the .gitkeep to work)
  3. Copy any `.xyz` file into the `dist` folder

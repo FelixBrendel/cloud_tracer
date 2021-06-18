@@ -1,17 +1,11 @@
-#include "dt_pathtrace.hpp"
 #include <cstdio>
 #include <cmath>
+#include "dt_pathtrace.hpp"
+#include "pi.hpp"
 
 // #define INFO(...) printf("INFO: "  __VA_ARGS__);
 #define INFO(...)
 
-#ifndef pi
-#  define pi 3.1415926535897932384626433832795
-#  define piOverTwo 1.5707963267948966192313216916398
-#  define inverseOfPi 0.31830988618379067153776752674503
-#  define inverseOfTwoPi 0.15915494309189533576888376337251
-#  define two_pi 6.283185307179586476925286766559
-#endif
 namespace Random {
     struct rng_state {
         uint32_t x;
@@ -22,11 +16,12 @@ namespace Random {
 
     static rng_state RNG_STATE;
 
-    uint TausStep(uint z, int S1, int S2, int S3, uint M) {
-        uint b = (((z << S1) ^ z) >> S2);
+    uint32_t TausStep(uint32_t z, int S1, int S2, int S3, uint32_t M) {
+        uint32_t b = (((z << S1) ^ z) >> S2);
         return ((z & M) << S3) ^ b;
     }
-    uint LCGStep(uint z, uint A, uint C) {
+
+    uint32_t LCGStep(uint32_t z, uint32_t A, uint32_t C) {
         return A * z + C;
     }
 

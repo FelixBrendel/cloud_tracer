@@ -1,5 +1,5 @@
 #pragma once
-#include "stdint.h"
+#include <stdint.h>
 #include "vector.hpp"
 #include "texture3d.hpp"
 #include "ray_pack.hpp"
