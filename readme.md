@@ -23,4 +23,4 @@
  - where is "up" / right handed or left handed?
 
 ## Known issues
- - Sample3DTexture crashes for some Seeds or SamplesPerPixel
+ - Sample3DTexture crashes for some Seeds or SamplesPerPixel (Probably fixed now?)

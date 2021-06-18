@@ -1,5 +1,5 @@
 GridFile = cloud-154.xyz
-Extinction = 10, 10, 10
+Extinction = 500, 500, 500
 ScatteringAlbedo = 1, 1, 1
 G = 0.3, 0.3, 0.3
 
@@ -11,4 +11,4 @@ ResX = 10
 ResY = 10
 SamplesPerPixel = 1
 
-Seed = 123
+Seed = 1233

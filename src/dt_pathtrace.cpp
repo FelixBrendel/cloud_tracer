@@ -91,9 +91,9 @@ float Sample3DTexture(texture3D Grid, float3 P) {
 
 #define IDX(x, y, z) ((x * Grid.h * Grid.d) + (y * Grid.d) + z)
 
-    float fw = Grid.w * P.x;
-    float fh = Grid.h * P.y;
-    float fd = Grid.d * P.z;
+    float fw =  P.x * (Grid.w - 1); // we want indices between 0 and len -1
+    float fh =  P.y * (Grid.h - 1); // we want indices between 0 and len -1
+    float fd =  P.z * (Grid.d - 1); // we want indices between 0 and len -1
 
     float tw = fw - (int)fw;
     float th = fh - (int)fh;
